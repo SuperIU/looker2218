@@ -27,12 +27,15 @@ view: order_items {
       time,
       date,
       week,
+      week_of_year,
       month,
       quarter,
       year
     ]
     sql: ${TABLE}.returned_at ;;
   }
+
+
 
   dimension: sale_price {
     type: number
