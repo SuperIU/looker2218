@@ -10,6 +10,8 @@ datagroup: balcazartest_default_datagroup {
 
 persist_with: balcazartest_default_datagroup
 
+week_start_day: sunday
+
 explore: order_items {
   join: orders {
     type: left_outer
