@@ -82,6 +82,7 @@ view: orders {
   dimension: status {
     type: string
     sql: ${TABLE}.status ;;
+    drill_fields: [detail*]
   }
 
   dimension: user_id {

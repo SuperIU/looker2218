@@ -31,12 +31,17 @@ view: order_items {
       quarter,
       year
     ]
+    convert_tz: no
+    datatype: date
+    drill_fields: [id, orders.id, inventory_items.id]
     sql: ${TABLE}.returned_at ;;
   }
 
   dimension: sale_price {
     type: number
     sql: ${TABLE}.sale_price ;;
+    drill_fields: [id, orders.id, inventory_items.id]
+
   }
 
   measure: count {
