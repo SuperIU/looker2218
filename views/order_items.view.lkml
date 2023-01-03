@@ -35,6 +35,15 @@ view: order_items {
     sql: ${TABLE}.returned_at ;;
   }
 
+  dimension_group: start {
+
+    type: time
+    timeframes: [time, hour, hour_of_day, day_of_week, day_of_year, date, week, month, month_num, month_name, quarter, day_of_month, year, raw, week_of_year]
+    datatype: date
+    sql: ${TABLE}.returned_at ;;
+
+  }
+
 
 
   dimension: sale_price {
