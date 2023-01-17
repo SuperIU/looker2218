@@ -90,8 +90,11 @@ view: users {
     <li>Value: {{ rendered_value }} </li>
     </ul> ;;
   }
-
-  # ----- Sets of fields for drilling ------
+measure: avg {
+  type: average
+  sql: ${id} ;;
+}
+  #----- Sets of fields for drilling ------
   set: detail {
     fields: [
       id,
